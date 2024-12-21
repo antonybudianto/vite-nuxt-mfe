@@ -7,6 +7,6 @@
 
 <script setup>
 defineComponent({
-  name: 'HostComponent'
+  name: "HostComponent"
 })
 </script>

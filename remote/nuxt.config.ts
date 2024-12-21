@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         name: "remote-app",
         filename: "remoteEntry.js",
         exposes: {
-          "./RemoteComponent": "./components/RemoteComponent.vue"
+          "./ContactRouter": "./components/ContactRouter.vue"
         },
         shared: []
         // shared: ['vue']

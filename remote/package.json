@@ -10,7 +10,7 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "clean": "rimraf .output",
-    "serve": "serve .output/public -p 3001"
+    "serve": "serve .output/public -p 3001 --cors"
   },
   "dependencies": {
     "nuxt": "^3.13.0",

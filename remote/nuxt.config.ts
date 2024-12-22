@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         name: "remote-app",
         filename: "remoteEntry.js",
         exposes: {
-          "./ContactRouter": "./components/ContactRouter.vue"
+          "./RemoteContactRouter": "./components/RemoteContactRouter.vue"
         },
         shared: []
         // shared: ['vue']
@@ -20,5 +20,8 @@ export default defineNuxtConfig({
     build: {
       target: "esnext"
     }
+  },
+  experimental: {
+    asyncEntry: true
   }
 })

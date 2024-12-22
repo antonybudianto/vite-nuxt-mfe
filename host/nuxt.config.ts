@@ -18,5 +18,8 @@ export default defineNuxtConfig({
     build: {
       target: "esnext"
     }
+  },
+  experimental: {
+    asyncEntry: true
   }
 })

@@ -17,7 +17,7 @@ cp .env.example .env
 
 ## Development
 
-First, we need to build the remote first. Check (this)[https://github.com/originjs/vite-plugin-federation/issues/525] for why.
+First, we need to build the remote first. Check [this](https://github.com/originjs/vite-plugin-federation/issues/525) for why.
 
 ```
 cd remote

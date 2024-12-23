@@ -10,19 +10,24 @@ export default defineNuxtConfig({
     preset: "static"
   },
   vite: {
-    plugins: [
-      topLevelAwait({
-        promiseExportName: "__tla",
-        promiseImportName: (i) => `__tla_${i}`
-      }),
-      federation({
-        name: "host-app",
-        remotes: {
-          remote: "http://localhost:3001/_nuxt/remoteEntry.js"
-        }
-        // shared: ["vue"]
-      })
-    ]
+    $client: {
+      plugins: [
+        topLevelAwait({
+          promiseExportName: "__tla",
+          promiseImportName: (i) => `__tla_${i}`
+        }),
+        federation({
+          name: "host-app",
+          remotes: {
+            remote: "http://localhost:3001/_nuxt/remoteEntry.js"
+          },
+          shared: ["vue"]
+        })
+      ]
+    },
+    $server: {
+      plugins: []
+    }
   },
   experimental: {
     asyncEntry: true

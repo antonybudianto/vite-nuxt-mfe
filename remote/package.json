@@ -12,7 +12,7 @@
     "postinstall": "nuxt prepare",
     "clean": "rimraf .output dist",
     "clean2": "rimraf --glob node_modules",
-    "serve": "serve .output/public -p 3001 --cors"
+    "serve": "serve .output/public -p 3001 --cors --single"
   },
   "dependencies": {
     "nuxt": "^3.13.0",

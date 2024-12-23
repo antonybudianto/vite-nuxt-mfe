@@ -18,5 +18,6 @@ pnpm serve
 
 # TODO
 
-- Enable CORS on remote JS assets
-- Scoped style still not works
+- Build-mode works but Dev-mode not works
+- Enable CORS on remote JS assets (fixed)
+- Scoped style still not works (fixed)

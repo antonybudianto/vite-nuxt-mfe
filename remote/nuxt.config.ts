@@ -10,21 +10,27 @@ export default defineNuxtConfig({
     preset: "static"
   },
   vite: {
-    plugins: [
-      topLevelAwait({
-        promiseExportName: "__tla",
-        promiseImportName: (i) => `__tla_${i}`
-      }),
-      federation({
-        name: "remote-app",
-        filename: "remoteEntry.js",
-        exposes: {
-          "./RemoteContactRouter": "./components/RemoteContactRouter.vue"
-        },
-        shared: []
-        // shared: ['vue']
-      })
-    ]
+    $client: {
+      plugins: [
+        topLevelAwait({
+          promiseExportName: "__tla",
+          promiseImportName: (i) => `__tla_${i}`
+        }),
+        federation({
+          name: "remote-app",
+          filename: "remoteEntry.js",
+          exposes: {
+            "./RemoteContactRouter": "./components/RemoteContactRouter.vue"
+          },
+          // shared: []
+          shared: ["vue"]
+        })
+      ]
+    },
+    $server: {
+      plugins: []
+    }
+
     // build: {
     //   target: "esnext"
     // }

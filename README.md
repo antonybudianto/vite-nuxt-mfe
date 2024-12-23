@@ -8,6 +8,12 @@ Vite-based Nuxt 3 starter with Micro-frontend enabled.
 - Repo Host: https://github.com/antonybudianto/demo-nuxt-mfe1
 - Repo Remote: https://github.com/antonybudianto/demo-nuxt-mfe-rmt1
 
+## How to use
+
+- It's recommended to split the repository for Host and Remote, and deploy separately
+- If you want to go with monorepo approach, make sure to setup a monorepo package manager (Pnpm workspace, Nx, etc.)
+- This repo is still evolving, and might not be production-ready yet 
+
 ## Initial setup
 
 ```

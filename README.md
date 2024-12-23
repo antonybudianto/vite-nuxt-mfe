@@ -2,12 +2,13 @@
 
 MFE with Nuxt being the Host and Remote
 
+## Initial setup
+
 ```
-cd host
-pnpm i
-pnpm build
-pnpm serve
+cp .env.example .env
 ```
+
+## Development
 
 ```
 cd remote
@@ -16,8 +17,30 @@ pnpm build
 pnpm serve
 ```
 
-# TODO
+```
+cd host
+pnpm i
+pnpm dev
+```
 
-- Build-mode works but Dev-mode not works
+Open http://localhost:3000
+
+## Deployment
+
+```
+cd remote
+pnpm i
+pnpm build
+pnpm serve
+
+cd host
+pnpm i
+pnpm build
+pnpm serve
+```
+
+## TODO
+
+- Build-mode works but Dev-mode not works (fixed)
 - Enable CORS on remote JS assets (fixed)
 - Scoped style still not works (fixed)

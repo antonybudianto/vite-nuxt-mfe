@@ -10,6 +10,16 @@ export default defineNuxtConfig({
     preset: "static"
   },
   vite: {
+    server: {
+      proxy: {
+        "^/node_modules/.*": {
+          target: "http://localhost:3000",
+          changeOrigin: true,
+          rewrite: (path) =>
+            path.replace(/^\/node_modules\//, "/_nuxt/node_modules/")
+        }
+      }
+    },
     $client: {
       plugins: [
         topLevelAwait({

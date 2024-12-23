@@ -5,11 +5,13 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "HOST=0.0.0.0 PORT=3001 nuxt dev",
+    "prebuild": "npm run clean",
     "pregenerate": "npm run clean",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "clean": "rimraf .output",
+    "clean": "rimraf .output dist",
+    "clean2": "rimraf --glob node_modules",
     "serve": "serve .output/public -p 3001 --cors"
   },
   "dependencies": {
@@ -17,8 +19,9 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "serve": "*",
+    "@originjs/vite-plugin-federation": "^1.3.5",
+    "serve": "~14.2.4",
     "rimraf": "6",
-    "@originjs/vite-plugin-federation": "^1.3.5"
+    "vite-plugin-top-level-await": "~1.4.4"
   }
 }

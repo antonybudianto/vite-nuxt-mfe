@@ -1,18 +1,18 @@
 # MFE nuxt x nuxt
 
-MFE with Nuxt being the Host and Remote 
+MFE with Nuxt being the Host and Remote
 
 ```
 cd host
 pnpm i
-pnpm generate
+pnpm build
 pnpm serve
 ```
 
 ```
 cd remote
 pnpm i
-pnpm generate
+pnpm build
 pnpm serve
 ```
 

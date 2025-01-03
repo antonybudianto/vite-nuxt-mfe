@@ -33,7 +33,7 @@ export default defineNuxtConfig({
           remotes: {
             remote: `${MFE_HOST}/_nuxt/remoteEntry.js`
           },
-          shared: ["vue"]
+          shared: ["vue", "pinia"]
         })
       ]
     },
@@ -41,6 +41,7 @@ export default defineNuxtConfig({
       plugins: []
     }
   },
+  plugins: ["~/plugins/pinia"],
   experimental: {
     asyncEntry: true
   }

@@ -4,7 +4,7 @@
     <div class="grid grid-cols-1 gap-4">
       <Suspense>
         <template #default>
-          <RemoteContactRouter />
+          <RemoteContactRouter label="propsFromHost" @increment="handleLog" />
         </template>
         <template #fallback>
           <div>Loading remote component...</div>
@@ -14,11 +14,15 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { defineAsyncComponent } from "vue"
 
-const RemoteContactRouter = defineAsyncComponent(() =>
-  import("remote/RemoteContactRouter")
+const handleLog = (value: number) => {
+  console.log("HOST: log increment", value)
+}
+const RemoteContactRouter = defineAsyncComponent(
+  // @ts-expect-error mfe
+  () => import("remote/RemoteContactRouter")
 )
 </script>
 

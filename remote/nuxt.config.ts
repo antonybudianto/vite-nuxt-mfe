@@ -22,8 +22,7 @@ export default defineNuxtConfig({
           exposes: {
             "./RemoteContactRouter": "./components/RemoteContactRouter.vue"
           },
-          // shared: []
-          shared: ["vue"]
+          shared: ["vue", "pinia"]
         })
       ]
     },
@@ -35,6 +34,7 @@ export default defineNuxtConfig({
     //   target: "esnext"
     // }
   },
+  modules: ["@pinia/nuxt"],
   experimental: {
     asyncEntry: true
   }

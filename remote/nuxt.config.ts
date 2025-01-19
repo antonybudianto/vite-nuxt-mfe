@@ -2,8 +2,6 @@ import { defineNuxtConfig } from "nuxt/config"
 import federation from "@originjs/vite-plugin-federation"
 import topLevelAwait from "vite-plugin-top-level-await"
 
-const BASE_URL = process.env.NUXT_BASE_URL || "http://localhost:3001"
-
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: false },
@@ -13,7 +11,7 @@ export default defineNuxtConfig({
   },
   vite: {
     $client: {
-      base: BASE_URL,
+      base: "/",
       plugins: [
         topLevelAwait({
           promiseExportName: "__tla",

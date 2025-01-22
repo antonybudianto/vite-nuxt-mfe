@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
   vite: {
     $client: {
+      base: "/",
       plugins: [
         topLevelAwait({
           promiseExportName: "__tla",
